@@ -15,3 +15,4 @@ void draw() {
     v[i].drawPlads();
   }
 }
+//Hej sutenlut
