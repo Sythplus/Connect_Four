@@ -1,4 +1,5 @@
 Plads[] v;
+Brik b = new Brik();
 
 void setup() {
   size(700, 600);
@@ -14,5 +15,10 @@ void draw() {
   for (int i = 0; i < v.length; i++) {
     v[i].drawPlads();
   }
+  b.drawBrik();
 }
-//Hej sutenlut
+
+void mouseClicked(){
+  b= new Brik();
+  
+}
