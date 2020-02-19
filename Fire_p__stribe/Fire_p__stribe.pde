@@ -1,5 +1,6 @@
 Plads[] v;
-Brik b = new Brik();
+Brik b, b2, b3, b4, b5, b6, b7;
+Brik[][] gitter = new Brik[6][7];
 
 void setup() {
   size(700, 600);
@@ -15,10 +16,52 @@ void draw() {
   for (int i = 0; i < v.length; i++) {
     v[i].drawPlads();
   }
-  b.drawBrik();
 }
 
-void mouseClicked(){
-  b= new Brik();
-  
-}
+
+void mousePressed() {
+  if (mouseX>b.xPos-50 && mouseY<b.yPos+50 && mouseX<b.xPos+50 && mouseY>t.bPos-50 && mouseButton == LEFT) {
+    for (int i = 0; i<6; i++) {
+      if (gitter([6-i][0] == null) {
+        gitter([6-i][0] = new Brik(255, 255, 0);
+        break;
+      }
+    }
+    if (mouseX>b2.xPos-50 && mouseY<b2.yPos+50 && mouseX<b2.xPos+50 && mouseY>b2.yPos-50 && mouseButton == LEFT) {
+      for (int i = 0; i<6; i++) {
+        if (gitter([6-i][0] == null) {
+          gitter([6-i][0] = new Brik();
+          break;
+        }
+        if (mouseX>b3.xPos-50 && mouseY<b3.yPos+50 && mouseX<b3.xPos+50 && mouseY>b3.yPos-50 && mouseButton == LEFT) {
+          for (int i = 0; i<6; i++) {
+            if (gitter([6-i][0] == null) {
+              gitter([6-i][0] = new Brik();
+              break;
+            }
+            if (mouseX>b4.xPos-50 && mouseY<b4.yPos+50 && mouseX<b4.xPos+50 && mouseY>b4.yPos-50 && mouseButton == LEFT) {
+              for (int i = 0; i<6; i++) {
+                if (gitter([6-i][0] == null) {
+                  gitter([6-i][0] = new Brik();
+                  break;
+                }
+                if (mouseX>b5.xPos-50 && mouseY<b5.yPos+50 && mouseX<b5.xPos+50 && mouseY>b5.yPos-50 && mouseButton == LEFT) {
+                  for (int i = 0; i<6; i++) {
+                    if (gitter([6-i][0] == null) {
+                      gitter([6-i][0] = new Brik();
+                      break;
+                    }
+                    if (mouseX>b6.xPos-50 && mouseY<b6.yPos+50 && mouseX<b6.xPos+50 && mouseY>b6.yPos-50 && mouseButton == LEFT) {
+                      for (int i = 0; i<6; i++) {
+                        if (gitter([6-i][0] == null) {
+                          gitter([6-i][0] = new Brik();
+                          break;
+                        }
+                        if (mouseX>b6.xPos-50 && mouseY<b6.yPos+50 && mouseX<b6.xPos+50 && mouseY>b6.yPos-50 && mouseButton == LEFT) {
+                          for (int i = 0; i<6; i++) {
+                            if (gitter([6-i][0] == null) {
+                              gitter([6-i][0] = new Brik();
+                              break;
+                            }
+                          }
+                        }
