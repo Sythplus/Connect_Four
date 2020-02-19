@@ -4,10 +4,10 @@ class Brik {
   int xPos;
   int yPos;
 
-  Brik(int xPos, int yPos) {
-    face = 2;
-    this.xPos = xPos;
-    this.yPos = yPos;
+  Brik(int xPos, int yPos, int face) {
+    this.face = face;
+    this.xPos = 50;
+    this.yPos = 50;
   }
 
   Brik(int n) {
@@ -18,7 +18,7 @@ class Brik {
 
     if (face == 1) {
       fill(255, 255, 0);
-    } else if (face == 2) {
+    } else if (face == 0) {
       fill(255, 0, 0);
     }
     ellipse(xPos, yPos, 75, 75);
