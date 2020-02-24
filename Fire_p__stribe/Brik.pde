@@ -6,8 +6,8 @@ class Brik {
 
   Brik(int xPos, int yPos, int face) {
     this.face = face;
-    this.xPos = 50;
-    this.yPos = 50;
+    this.xPos = xPos;
+    this.yPos = yPos;
   }
 
   Brik(int n) {
