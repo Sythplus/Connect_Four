@@ -103,12 +103,7 @@ void mousePressed() {
   }
 }
 
-// x x x x x x x
-// x x x x x x x
-// x x x x o x x
-// x x x x x x x
-// x x x x x x x
-// x x x x x x x
+
 
 boolean checkForWin(int y, int x){
     // hvilken farve er lige blevet lagt
@@ -140,5 +135,77 @@ boolean checkForWin(int y, int x){
         return true;
     }
 
+    // check 3 ned
+    int count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((gitter.length >  (y - i)) && (gitter[y - i][x] != null) && gitter[y - i][x].face == faceC)
+        {
+            count++;
+        }
+    }
+    if (count == 3)
+    {
+        return true;
+    }
+
+    // check op til højre
+    count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((0 <=  (y - i)) && (gitter.length >  (x + i)) && (gitter[y - i][x + i] != null) && gitter[y - i][x + i].face == faceC)
+        {
+            count++;
+        }
+    }
+    if (count == 3)
+    {
+        return true;
+    }
+
+    // check op til venstre
+    count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((0 <=  (y - i)) && (0 <= (x - i)) && (gitter[y - i][x - i] != null) && gitter[y - i][x - i].face == faceC)
+        {
+            count++;
+        }
+    }
+    if (count == 3)
+    {
+        return true;
+    }
+
+    // check ned til venstre
+    count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((gitter.length >  (y + i)) && (0 <= (x - i)) && (gitter[y + i][x - i] != null) && gitter[y + i][x - i].face == faceC)
+        {
+            count++;
+        }
+    }
+    if (count == 3)
+    {
+        return true;
+    }
+
+    // check ned til højre
+    count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((gitter.length >  (y + i)) && (gitter.length >  (x + i)) && (gitter[y + i][x + i] != null) && gitter[y + i][x + i].face == faceC)
+        {
+            count++;
+        }
+    }
+    if (count == 3)
+    {
+        return true;
+    }
+
     return false;
 }
+
+// x x x x x x x
+// x x x x x x x
+// x x x x o x x
+// x x x x x x x
+// x x x x x x x
+// x x x x x x x
