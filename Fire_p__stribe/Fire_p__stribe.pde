@@ -36,6 +36,7 @@ void mousePressed() {
       if (gitter[5-i][0] == null) {
         gitter[5-i][0] = new Brik(50, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
@@ -45,6 +46,7 @@ void mousePressed() {
       if (gitter[5-i][1] == null) {
         gitter[5-i][1] = new Brik(150, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
@@ -54,6 +56,7 @@ void mousePressed() {
       if (gitter[5-i][2] == null) {
         gitter[5-i][2] = new Brik(250, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
@@ -63,6 +66,7 @@ void mousePressed() {
       if (gitter[5-i][3] == null) {
         gitter[5-i][3] = new Brik(350, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
@@ -72,6 +76,7 @@ void mousePressed() {
       if (gitter[5-i][4] == null) {
         gitter[5-i][4] = new Brik(450, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
@@ -81,6 +86,7 @@ void mousePressed() {
       if (gitter[5-i][5] == null) {
         gitter[5-i][5] = new Brik(550, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
@@ -90,8 +96,41 @@ void mousePressed() {
       if (gitter[5-i][6] == null) {
         gitter[5-i][6] = new Brik(650, (5-i)*100+50, tur);
         tur = (tur + 1) % 2;
+        println(checkForWin(5-i, 0));
         break;
       }
     }
   }
+}
+
+// x x x x x x x
+// x x x x x x x
+// x x x x o x x
+// x x x x x x x
+// x x x x x x x
+// x x x x x x x
+
+void checkForWin(int x, int y){
+    // hvilken farve er lige blevet lagt
+    int faceC = gitter[x][y].face;
+    
+    // check 3 til højre
+    int count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((gitter.length >  (x + i)) && gitter[x + i][y].face == faceC);
+            count++;
+    }
+    if (count == 3)
+        return true;
+
+    // check 3 til ventre
+    count = 0;
+    for (int i= 1; i<4; i++){ 
+        if ((0 <= (x - i)) && gitter[x - i][y].face == faceC);
+            count++;
+    }
+    if (count == 3)
+        return true;
+
+    return false;
 }
