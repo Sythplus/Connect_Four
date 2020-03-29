@@ -117,7 +117,7 @@ boolean checkForWin(int y, int x){
     // check 3 til højre
     int count = 0;
     for (int i= 1; i<4; i++){ 
-        if ((gitter.length >  (x + i)) && gitter[y][x + i].face == faceC)
+        if ((gitter.length >  (x + i)) && (gitter[y][x + i] != null) && gitter[y][x + i].face == faceC)
         {
             count++;
         }
@@ -131,7 +131,7 @@ boolean checkForWin(int y, int x){
     count = 0;
     for (int i= 1; i<4; i++)
     { 
-        if ((0 <= (x - i)) && gitter[y][x-i].face == faceC)
+        if ((0 <= (x - i)) && (gitter[y][x + i] != null) && gitter[y][x-i].face == faceC)
         {
             count++;
         }
